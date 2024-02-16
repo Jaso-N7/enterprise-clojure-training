@@ -1,6 +1,8 @@
 (ns training.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(+ 1 2 3)
+
+(println "hello world")
+
+;; Calculate 5!
+(reduce * (range 1 6))
