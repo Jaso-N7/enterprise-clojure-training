@@ -15,5 +15,14 @@
 ;; 2.8 Regex
 (re-seq #"\w+" "the quick brown fox")
 
+;; pythag : number number -> number
+(defn pythag
+  "Returns the sum of squares for two inputs
+  (pythag 4 3) => 5"
+  [a b]
+  (when-not (and (number? a) (number? b))
+    (throw (ex-info "Bad input, expecting a number" {:a a :b b})))
+  (Math/sqrt (+ (* a a) (* b b))))
+
 
 
