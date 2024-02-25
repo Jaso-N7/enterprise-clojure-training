@@ -24,5 +24,5 @@
     (throw (ex-info "Bad input, expecting a number" {:a a :b b})))
   (Math/sqrt (+ (* a a) (* b b))))
 
-
-
+(defn post [url]
+  {:body (str "Hello world")})

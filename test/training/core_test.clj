@@ -13,3 +13,22 @@
                           (pythag 4 \b)))
     (is (thrown-with-msg? Exception #"Bad input, expecting a number"
                           (pythag \a "b")))))
+
+(deftest test-post
+  (let [msg "Goodbye world"
+        called (atom 0)]
+    (with-redefs [str (fn [& args]
+                        (swap! called inc)
+                        msg)]
+
+      (is (= {:body msg}
+             (post "http://service.com/greet")))
+      
+      (post "http://service.com/greet")
+      (post "http://service.com/greet")
+      (post "http://service.com/greet")
+      (post "http://service.com/greet")
+      (post "http://service.com/greet")
+      (post "http://service.com/greet")
+      
+      (is (= 7 @called)))))
