@@ -47,21 +47,8 @@
 ;; F 0% - 20% represents fail
 
 ;; score->grade : Score -> Grade
-;; Given a test score, returns a grade
-#_(defn score->grade [score] "F")
-
-(comment
-  ;; Template
-  (defn grade-fn
-    [score]
-    (cond (<= 81 score 100) ""
-          (>= 61 score 80) ""
-          (>= 41 score 60) ""
-          (>= 21 score 40) ""
-          :else ""))
-  )
-
 (defn score->grade
+  "Given a test score, returns a grade"
   [score]
   (cond (<= 81 score 100) "A"
         (<= 61 score 80) "B"
