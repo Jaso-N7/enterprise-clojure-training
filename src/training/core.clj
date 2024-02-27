@@ -55,3 +55,14 @@
         (<= 41 score 60) "C"
         (<= 21 score 40) "D"
         :else "F"))
+
+;; n! : Natural -> Natural
+(defn n!
+  "Takes a number and calculates the factorial of that number"
+  [n]
+  (loop [nat n
+         accum 1]
+    (if (zero? nat)
+      accum
+      (recur (dec nat) (* accum nat)))))
+

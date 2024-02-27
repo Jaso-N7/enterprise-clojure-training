@@ -41,3 +41,9 @@
       (is (= "A" (score->grade score3)))
       (is (= "C" (score->grade score2)))
       (is (= "F" (score->grade score1))))))
+
+(deftest test-n!
+  (testing "Factorial"
+    (is (= 120 (n! 5)))
+    (is (= 720 (n! 6)))
+    (is (= 1 (n! 0)))))
