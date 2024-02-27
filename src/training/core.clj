@@ -71,3 +71,12 @@
   ([n] (r! n 1))
   ([n res] (if (zero? n) res (recur (dec n) (* res n)))))
 
+;; max-fibonacci : Natural -> Natural
+(defn max-fibonacci
+  "Finds the maximum Fibonacci sequence for number less than the input"
+  [max]
+  (loop [k 1
+         result 1]
+    (if (> result max)
+      k
+      (recur result (+ k result)))))
