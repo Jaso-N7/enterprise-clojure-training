@@ -43,7 +43,11 @@
       (is (= "F" (score->grade score1))))))
 
 (deftest test-n!
-  (testing "Factorial"
+  (testing "Factorial using loop"
     (is (= 120 (n! 5)))
     (is (= 720 (n! 6)))
-    (is (= 1 (n! 0)))))
+    (is (= 1 (n! 0))))
+  (testing "Factorial using recur"
+    (is (= (n! 5) (f! 5)))
+    (is (= 720 (f! 6)))
+    (is (= (n! 0) (f! 0)))))

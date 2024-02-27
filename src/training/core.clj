@@ -57,6 +57,7 @@
         :else "F"))
 
 ;; n! : Natural -> Natural
+;; r! : Natural -> Natural
 (defn n!
   "Takes a number and calculates the factorial of that number"
   [n]
@@ -65,4 +66,8 @@
     (if (zero? nat)
       accum
       (recur (dec nat) (* accum nat)))))
+(defn r!
+  "Takes a number and calculates the factorial of that number"
+  ([n] (r! n 1))
+  ([n res] (if (zero? n) res (recur (dec n) (* res n)))))
 
