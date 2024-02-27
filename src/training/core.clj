@@ -26,3 +26,45 @@
 
 (defn post [url]
   {:body (str "Hello world")})
+
+;; A Score is a Number
+;; INTERPRETATION: A test score
+;; WHERE: the min is 0 and the max is 100
+
+;; A Grade is one of:
+;; - A
+;; - B
+;; - C
+;; - D
+;; - F
+;; INTERPRETATION: Based on test score, that falls within certain range,
+;;                 the grade will be assigned
+;; WHERE: the grade is String and
+;; A 81% - 100%
+;; B 61% - 80%
+;; C 41% - 60%
+;; D 21% - 40%
+;; F 0% - 20% represents fail
+
+;; score->grade : Score -> Grade
+;; Given a test score, returns a grade
+#_(defn score->grade [score] "F")
+
+(comment
+  ;; Template
+  (defn grade-fn
+    [score]
+    (cond (<= 81 score 100) ""
+          (>= 61 score 80) ""
+          (>= 41 score 60) ""
+          (>= 21 score 40) ""
+          :else ""))
+  )
+
+(defn score->grade
+  [score]
+  (cond (<= 81 score 100) "A"
+        (<= 61 score 80) "B"
+        (<= 41 score 60) "C"
+        (<= 21 score 40) "D"
+        :else "F"))

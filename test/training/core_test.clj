@@ -32,3 +32,12 @@
       (post "http://service.com/greet")
       
       (is (= 7 @called)))))
+
+(deftest test-score->grade
+  (testing "Returns correct grade"
+    (let [score1 0 
+          score2 51.5 
+          score3 100]
+      (is (= "A" (score->grade score3)))
+      (is (= "C" (score->grade score2)))
+      (is (= "F" (score->grade score1))))))
