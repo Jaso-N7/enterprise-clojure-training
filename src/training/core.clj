@@ -88,5 +88,13 @@
   [m n]
   (reduce + (range m (inc n))))
 
+;; powers-of : Natural Natural -> (Naturals)
+(defn powers-of
+  "Produces a sequence of powers of m up to a limit of n"
+  [m n]
+  (take n (iterate #(+ % %) 1)))
+
+
+
 
 

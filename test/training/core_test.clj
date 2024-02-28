@@ -59,3 +59,7 @@
 (deftest test-sum-range
   (is (= 15 (sum-range  1  5)))
   (is (= 40 (sum-range -5 10))))
+
+(deftest test-powers-of
+  (is (= '(1 2 4 8 16) (powers-of 2 5)))
+  (is (= '(1 2 4 8 16 32 64 128) (powers-of 2 8))))
