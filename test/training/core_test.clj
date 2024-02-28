@@ -63,3 +63,8 @@
 (deftest test-powers-of
   (is (= '(1 2 4 8 16) (powers-of 2 5)))
   (is (= '(1 2 4 8 16 32 64 128) (powers-of 2 8))))
+
+(deftest test-sans-vowel
+  (is (= '(\g \d \l) (sans-vowel "gadol")))
+  (is (= '(\N \t \n \l) (sans-vowel "Natanel")))
+  (is (= '(\1 \t \w \3) (sans-vowel "1two3"))))

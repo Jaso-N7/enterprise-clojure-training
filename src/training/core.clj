@@ -94,6 +94,14 @@
   [m n]
   (take n (iterate #(+ % %) 1)))
 
+;; sans-vowel : String -> [Chars]
+(defn sans-vowel
+  "Takes a string and produces a sequence of characters with no vowels"
+  [s]
+  (let [vowels #{\a \e \i \o \u}]
+    (remove vowels s)))
+
+
 
 
 
