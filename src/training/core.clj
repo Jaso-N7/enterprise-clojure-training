@@ -80,3 +80,13 @@
     (if (> result max)
       k
       (recur result (+ k result)))))
+
+;; sum-range : integer integer -> integer
+(defn sum-range
+  "Returns the sum of the numbers in a range between two input integers,
+  inclusive of the inputs"
+  [m n]
+  (reduce + (range m (inc n))))
+
+
+

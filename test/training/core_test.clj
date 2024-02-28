@@ -55,3 +55,7 @@
 (deftest test-max-fibonacci
   (testing "Get max fibonacci number less than specified"
     (is (= 89 (max-fibonacci 100)))))
+
+(deftest test-sum-range
+  (is (= 15 (sum-range  1  5)))
+  (is (= 40 (sum-range -5 10))))
