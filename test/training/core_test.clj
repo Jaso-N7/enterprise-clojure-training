@@ -70,4 +70,5 @@
   (is (= '(\1 \t \w \3) (sans-vowel "1two3"))))
 
 (deftest test-ratios
-  (is (= '(1 1/2 1/3 1/4 1/5) (ratios))))
+  (is (= '(1 1/2 1/3 1/4 1/5) (ratios)))
+  (is (= '(1 1/2 1/3 1/4 1/5 1/6 1/7 1/8 1/9 1/10) (ratios 10))))

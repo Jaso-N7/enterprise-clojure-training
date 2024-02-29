@@ -102,8 +102,10 @@
     (remove vowels s)))
 
 ;; ratios : [Ratios]
+;; ratios : Integer -> [Ratios]
 (defn ratios
-  "Produces a sequence of (1 1/2 1/3 1/4 ...)"
-  []
-  (let [inf (map inc (range))]
-    (take 5 (map #(/ 1 %) inf))))
+  "Produces a sequence of (1 1/2 1/3 1/4 1/5) when no arguments are present,
+  otherwise produce a sequence n number of times"
+  ([]  (ratios 5))
+  ([n] (take n (map / (repeat 1)
+                (rest (range))))))
