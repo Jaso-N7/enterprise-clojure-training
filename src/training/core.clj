@@ -101,8 +101,9 @@
   (let [vowels #{\a \e \i \o \u}]
     (remove vowels s)))
 
-
-
-
-
-
+;; ratios : [Ratios]
+(defn ratios
+  "Produces a sequence of (1 1/2 1/3 1/4 ...)"
+  []
+  (let [inf (map inc (range))]
+    (take 5 (map #(/ 1 %) inf))))

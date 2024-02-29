@@ -68,3 +68,6 @@
   (is (= '(\g \d \l) (sans-vowel "gadol")))
   (is (= '(\N \t \n \l) (sans-vowel "Natanel")))
   (is (= '(\1 \t \w \3) (sans-vowel "1two3"))))
+
+(deftest test-ratios
+  (is (= '(1 1/2 1/3 1/4 1/5) (ratios))))
