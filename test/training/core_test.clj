@@ -72,3 +72,7 @@
 (deftest test-ratios
   (is (= '(1 1/2 1/3 1/4 1/5) (ratios)))
   (is (= '(1 1/2 1/3 1/4 1/5 1/6 1/7 1/8 1/9 1/10) (ratios 10))))
+
+(deftest test-fib-seq
+  (is (= '(1 1 2 3 5 8 13 21) (fib-seq 8)))
+  (is (= '(1 1 2 3 5 8 13 21 34 55 89 144 233 377) (fib-seq 14))))

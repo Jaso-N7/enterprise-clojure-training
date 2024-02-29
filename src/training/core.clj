@@ -108,4 +108,12 @@
   otherwise produce a sequence n number of times"
   ([]  (ratios 5))
   ([n] (take n (map / (repeat 1)
-                (rest (range))))))
+                    (rest (range))))))
+
+;; fib-seq : Natural -> [Naturals]
+(defn fib-seq
+  "Given n, produces the Fibonacci sequence of length n"
+  [n]
+  (letfn [(fib-calc [[a b]] [b (+ a b)])]
+    (take n (map first (iterate fib-calc [1 1])))))
+
